@@ -8,7 +8,7 @@ M.ui = {
 	theme = "kanagawa",
 
   statusline = {
-    theme = "vscode_colored",
+    theme = "vscode",
     separator_style = "default",
   },
 
