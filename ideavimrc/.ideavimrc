@@ -1,0 +1,64 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+set which-key
+" Don't use Ex mode, use Q for formatting.
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Plugins
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope vim-commentary'
+Plug 'preservim/nerdtree'
+
+" Setup Plugins
+set visualbell
+set timeoutlen=3000
+let g:WhichKey_FontSize             =16
+let g:WhichKey_DefaultDelay         =0
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+nnoremap <Space> <Nop>
+" Copy
+noremap <Space>y "+y<CR>
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+"" Map \b to toggle the breakpoint on the current line
+nmap <Tab>          <action>(NextTab)
+nmap <S-Tab>        <action>(PreviousTab)
+nmap <Space>r      <action>(ReformatCode)
+
+" Error Handle
+nmap <Space>n      :action GotoNextError<CR>
+map gh              <action>(ShowErrorDescription)
+
+" File (TeleScope)
+nmap <Space>ff      :action GotoFile<CR>
+nmap <Space>fg      :action FindInPath<CR>
+
+" Focus
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+
+" Split
+nnoremap <c-\> :action SplitVertically<CR>
+
+" Terminal
+nnoremap <Space>t :action Terminal.OpenInTerminal<CR>
+
+" NerdTree
+map <Space>e :NERDTreeToggle<CR>
+
