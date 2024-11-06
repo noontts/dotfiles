@@ -16,7 +16,7 @@ map("n", "<leader>fg", ":Telescope live_grep<cr>")
 
 -- nvimtree
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" })
-map("n", "<C-n>", "<cmd>NvimTreeFocus<CR>", { desc = "nvimtree focus window" })
+
 -- Open Float
 map("n", "<leader>of", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Open float diagnostic" })
 
